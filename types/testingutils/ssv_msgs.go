@@ -187,10 +187,10 @@ var postConsensusAttestationMsg = func(
 		attData = TestingWrongAttestationData
 	}
 
-	signed, root, _ := signer.SignBeaconObject(attData, d, sk.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(attData, d, sk.GetPublicKey().Serialize(), types.DomainAttester)
 
 	if wrongBeaconSig {
-		signed, _, _ = signer.SignBeaconObject(attData, d, Testing7SharesSet().ValidatorPK.Serialize())
+		signed, _, _ = signer.SignBeaconObject(attData, d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainAttester)
 	}
 
 	msgs := ssv.PartialSignatureMessages{
@@ -275,9 +275,9 @@ var postConsensusBeaconBlockMsg = func(
 	}
 
 	d, _ := beacon.DomainData(1, types.DomainProposer) // epoch doesn't matter here, hard coded
-	sig, root, _ := signer.SignBeaconObject(block, d, sk.GetPublicKey().Serialize())
+	sig, root, _ := signer.SignBeaconObject(block, d, sk.GetPublicKey().Serialize(), types.DomainProposer)
 	if wrongBeaconSig {
-		sig, root, _ = signer.SignBeaconObject(block, d, Testing7SharesSet().ValidatorPK.Serialize())
+		sig, root, _ = signer.SignBeaconObject(block, d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainProposer)
 	}
 	blsSig := spec.BLSSignature{}
 	copy(blsSig[:], sig)
@@ -309,7 +309,7 @@ var PreConsensusFailedMsg = func(msgSigner *bls.SecretKey, msgSignerID types.Ope
 	signer := NewTestingKeyManager()
 	beacon := NewTestingBeaconNode()
 	d, _ := beacon.DomainData(TestingDutyEpoch, types.DomainRandao)
-	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, msgSigner.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, msgSigner.GetPublicKey().Serialize(), types.DomainRandao)
 
 	msg := ssv.PartialSignatureMessages{
 		Type: ssv.RandaoPartialSig,
@@ -366,7 +366,7 @@ var PreConsensusRandaoDifferentSignerMsg = func(
 	signer := NewTestingKeyManager()
 	beacon := NewTestingBeaconNode()
 	d, _ := beacon.DomainData(TestingDutyEpoch, types.DomainRandao)
-	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, randaoSigner.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, randaoSigner.GetPublicKey().Serialize(), types.DomainRandao)
 
 	msg := ssv.PartialSignatureMessages{
 		Type: ssv.RandaoPartialSig,
@@ -397,9 +397,9 @@ var randaoMsg = func(
 	signer := NewTestingKeyManager()
 	beacon := NewTestingBeaconNode()
 	d, _ := beacon.DomainData(epoch, types.DomainRandao)
-	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(epoch), d, sk.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(epoch), d, sk.GetPublicKey().Serialize(), types.DomainRandao)
 	if wrongBeaconSig {
-		signed, root, _ = signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, Testing7SharesSet().ValidatorPK.Serialize())
+		signed, root, _ = signer.SignBeaconObject(types.SSZUint64(TestingDutyEpoch), d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainRandao)
 	}
 
 	msgs := ssv.PartialSignatureMessages{
@@ -467,9 +467,9 @@ var selectionProofMsg = func(
 	signer := NewTestingKeyManager()
 	beacon := NewTestingBeaconNode()
 	d, _ := beacon.DomainData(1, types.DomainSelectionProof)
-	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(slot), d, beaconsk.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(types.SSZUint64(slot), d, beaconsk.GetPublicKey().Serialize(), types.DomainSelectionProof)
 	if wrongBeaconSig {
-		signed, root, _ = signer.SignBeaconObject(types.SSZUint64(slot), d, Testing7SharesSet().ValidatorPK.Serialize())
+		signed, root, _ = signer.SignBeaconObject(types.SSZUint64(slot), d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainSelectionProof)
 	}
 
 	_msgs := make([]*ssv.PartialSignatureMessage, 0)
@@ -557,9 +557,9 @@ var postConsensusAggregatorMsg = func(
 		aggData = TestingWrongAggregateAndProof
 	}
 
-	signed, root, _ := signer.SignBeaconObject(aggData, d, sk.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(aggData, d, sk.GetPublicKey().Serialize(), types.DomainAggregateAndProof)
 	if wrongBeaconSig {
-		signed, root, _ = signer.SignBeaconObject(aggData, d, Testing7SharesSet().ValidatorPK.Serialize())
+		signed, root, _ = signer.SignBeaconObject(aggData, d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainAggregateAndProof)
 	}
 
 	msgs := ssv.PartialSignatureMessages{
@@ -642,9 +642,9 @@ var postConsensusSyncCommitteeMsg = func(
 	if wrongRoot {
 		blockRoot = TestingSyncCommitteeWrongBlockRoot
 	}
-	signed, root, _ := signer.SignBeaconObject(types.SSZBytes(blockRoot[:]), d, sk.GetPublicKey().Serialize())
+	signed, root, _ := signer.SignBeaconObject(types.SSZBytes(blockRoot[:]), d, sk.GetPublicKey().Serialize(), types.DomainSyncCommittee)
 	if wrongBeaconSig {
-		signed, root, _ = signer.SignBeaconObject(types.SSZBytes(blockRoot[:]), d, Testing7SharesSet().ValidatorPK.Serialize())
+		signed, root, _ = signer.SignBeaconObject(types.SSZBytes(blockRoot[:]), d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainSyncCommittee)
 	}
 
 	msgs := ssv.PartialSignatureMessages{
@@ -738,9 +738,9 @@ var contributionProofMsg = func(
 			Slot:              slot,
 			SubcommitteeIndex: subnet,
 		}
-		sig, root, _ := signer.SignBeaconObject(data, d, beaconsk.GetPublicKey().Serialize())
+		sig, root, _ := signer.SignBeaconObject(data, d, beaconsk.GetPublicKey().Serialize(), types.DomainSyncCommitteeSelectionProof)
 		if wrongBeaconSig {
-			sig, root, _ = signer.SignBeaconObject(data, d, Testing7SharesSet().ValidatorPK.Serialize())
+			sig, root, _ = signer.SignBeaconObject(data, d, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainSyncCommitteeSelectionProof)
 		}
 
 		msg := &ssv.PartialSignatureMessage{
@@ -851,7 +851,7 @@ var postConsensusSyncCommitteeContributionMsg = func(
 		}
 		dProof, _ := beacon.DomainData(1, types.DomainSyncCommitteeSelectionProof)
 
-		proofSig, _, _ := signer.SignBeaconObject(data, dProof, keySet.ValidatorPK.Serialize())
+		proofSig, _, _ := signer.SignBeaconObject(data, dProof, keySet.ValidatorPK.Serialize(), types.DomainSyncCommitteeSelectionProof)
 		blsProofSig := spec.BLSSignature{}
 		copy(blsProofSig[:], proofSig)
 
@@ -865,9 +865,9 @@ var postConsensusSyncCommitteeContributionMsg = func(
 			SelectionProof:  blsProofSig,
 		}
 
-		signed, root, _ := signer.SignBeaconObject(contribAndProof, dContribAndProof, sk.GetPublicKey().Serialize())
+		signed, root, _ := signer.SignBeaconObject(contribAndProof, dContribAndProof, sk.GetPublicKey().Serialize(), types.DomainSyncCommitteeSelectionProof)
 		if wrongBeaconSig {
-			signed, root, _ = signer.SignBeaconObject(contribAndProof, dContribAndProof, Testing7SharesSet().ValidatorPK.Serialize())
+			signed, root, _ = signer.SignBeaconObject(contribAndProof, dContribAndProof, Testing7SharesSet().ValidatorPK.Serialize(), types.DomainSyncCommitteeSelectionProof)
 		}
 
 		msg := &ssv.PartialSignatureMessage{

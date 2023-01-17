@@ -16,7 +16,7 @@ var signBeaconObject = func(
 	ks *TestKeySet,
 ) spec.BLSSignature {
 	domain, _ := NewTestingBeaconNode().DomainData(1, domainType)
-	ret, _, _ := NewTestingKeyManager().SignBeaconObject(obj, domain, ks.ValidatorPK.Serialize())
+	ret, _, _ := NewTestingKeyManager().SignBeaconObject(obj, domain, ks.ValidatorPK.Serialize(), domainType)
 
 	blsSig := spec.BLSSignature{}
 	copy(blsSig[:], ret)
