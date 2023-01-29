@@ -2,7 +2,9 @@ package ssv
 
 import (
 	"crypto/sha256"
-	"encoding/json"
+
+	json "github.com/bytedance/sonic"
+
 	"github.com/bloxapp/ssv-spec/qbft"
 	"github.com/bloxapp/ssv-spec/types"
 	"github.com/pkg/errors"

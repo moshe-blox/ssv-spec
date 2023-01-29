@@ -1,8 +1,6 @@
 package types
 
-import (
-	"encoding/json"
-)
+import json "github.com/bytedance/sonic"
 
 // Share holds all info about the QBFT/ SSV Committee for msg signing and verification
 type Share struct {

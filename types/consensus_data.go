@@ -2,7 +2,9 @@ package types
 
 import (
 	"encoding/hex"
-	"encoding/json"
+
+	json "github.com/bytedance/sonic"
+
 	"github.com/attestantio/go-eth2-client/spec/altair"
 	"github.com/attestantio/go-eth2-client/spec/bellatrix"
 	"github.com/attestantio/go-eth2-client/spec/phase0"

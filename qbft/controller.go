@@ -3,8 +3,10 @@ package qbft
 import (
 	"bytes"
 	"crypto/sha256"
-	"encoding/json"
 	"fmt"
+
+	json "github.com/bytedance/sonic"
+
 	"github.com/bloxapp/ssv-spec/types"
 	"github.com/pkg/errors"
 )

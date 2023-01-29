@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"encoding/binary"
 	"encoding/hex"
-	"encoding/json"
+
+	json "github.com/bytedance/sonic"
 )
 
 // ValidatorPK is an eth2 validator public key

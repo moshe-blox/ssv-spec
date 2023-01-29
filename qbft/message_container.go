@@ -2,7 +2,9 @@ package qbft
 
 import (
 	"bytes"
-	"encoding/json"
+
+	json "github.com/bytedance/sonic"
+
 	"github.com/bloxapp/ssv-spec/types"
 )
 

@@ -1,13 +1,15 @@
 package spectest
 
 import (
-	"encoding/json"
-	"github.com/bloxapp/ssv-spec/qbft/spectest/tests/timeout"
 	"os"
 	"path/filepath"
 	"reflect"
 	"strings"
 	"testing"
+
+	json "github.com/bytedance/sonic"
+
+	"github.com/bloxapp/ssv-spec/qbft/spectest/tests/timeout"
 
 	"github.com/bloxapp/ssv-spec/qbft"
 	tests2 "github.com/bloxapp/ssv-spec/qbft/spectest/tests"
@@ -121,7 +123,7 @@ func TestJson(t *testing.T) {
 				err = pre.Decode(preByts)
 				require.NoError(t, err)
 				typedTest.Pre = pre
-				
+
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			default:

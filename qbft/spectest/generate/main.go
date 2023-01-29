@@ -1,10 +1,11 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"os"
 	"reflect"
+
+	json "github.com/bytedance/sonic"
 
 	"github.com/bloxapp/ssv-spec/qbft/spectest"
 )

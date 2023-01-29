@@ -1,9 +1,10 @@
 package qbft
 
 import (
-	"encoding/json"
 	"fmt"
 	"sync"
+
+	json "github.com/bytedance/sonic"
 
 	"github.com/pkg/errors"
 
