@@ -102,10 +102,10 @@ func (s *State) GetRoot() ([]byte, error) {
 
 // Encode returns a msg encoded bytes or error
 func (s *State) Encode() ([]byte, error) {
-	return json.Marshal(s)
+	return json.ConfigFastest.Marshal(s)
 }
 
 // Decode returns error if decoding failed
 func (s *State) Decode(data []byte) error {
-	return json.Unmarshal(data, &s)
+	return json.ConfigFastest.Unmarshal(data, &s)
 }

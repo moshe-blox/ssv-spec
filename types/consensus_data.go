@@ -17,12 +17,12 @@ func (cm *ContributionsMap) MarshalJSON() ([]byte, error) {
 	for k, v := range *cm {
 		m[hex.EncodeToString(k[:])] = v
 	}
-	return json.Marshal(m)
+	return json.ConfigFastest.Marshal(m)
 }
 
 func (cm *ContributionsMap) UnmarshalJSON(input []byte) error {
 	m := make(map[string]*altair.SyncCommitteeContribution)
-	if err := json.Unmarshal(input, &m); err != nil {
+	if err := json.ConfigFastest.Unmarshal(input, &m); err != nil {
 		return err
 	}
 
@@ -55,9 +55,9 @@ type ConsensusData struct {
 }
 
 func (cid *ConsensusData) Encode() ([]byte, error) {
-	return json.Marshal(cid)
+	return json.ConfigFastest.Marshal(cid)
 }
 
 func (cid *ConsensusData) Decode(data []byte) error {
-	return json.Unmarshal(data, &cid)
+	return json.ConfigFastest.Unmarshal(data, &cid)
 }

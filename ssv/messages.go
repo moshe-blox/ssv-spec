@@ -29,12 +29,12 @@ type PartialSignatureMessages struct {
 
 // Encode returns a msg encoded bytes or error
 func (msgs *PartialSignatureMessages) Encode() ([]byte, error) {
-	return json.Marshal(msgs)
+	return json.ConfigFastest.Marshal(msgs)
 }
 
 // Decode returns error if decoding failed
 func (msgs *PartialSignatureMessages) Decode(data []byte) error {
-	return json.Unmarshal(data, msgs)
+	return json.ConfigFastest.Unmarshal(data, msgs)
 }
 
 // GetRoot returns the root used for signing and verification
@@ -72,12 +72,12 @@ type PartialSignatureMessage struct {
 
 // Encode returns a msg encoded bytes or error
 func (pcsm *PartialSignatureMessage) Encode() ([]byte, error) {
-	return json.Marshal(pcsm)
+	return json.ConfigFastest.Marshal(pcsm)
 }
 
 // Decode returns error if decoding failed
 func (pcsm *PartialSignatureMessage) Decode(data []byte) error {
-	return json.Unmarshal(data, pcsm)
+	return json.ConfigFastest.Unmarshal(data, pcsm)
 }
 
 func (pcsm *PartialSignatureMessage) GetRoot() ([]byte, error) {
@@ -111,12 +111,12 @@ type SignedPartialSignatureMessage struct {
 
 // Encode returns a msg encoded bytes or error
 func (spcsm *SignedPartialSignatureMessage) Encode() ([]byte, error) {
-	return json.Marshal(spcsm)
+	return json.ConfigFastest.Marshal(spcsm)
 }
 
 // Decode returns error if decoding failed
 func (spcsm *SignedPartialSignatureMessage) Decode(data []byte) error {
-	return json.Unmarshal(data, &spcsm)
+	return json.ConfigFastest.Unmarshal(data, &spcsm)
 }
 
 func (spcsm *SignedPartialSignatureMessage) GetSignature() types.Signature {

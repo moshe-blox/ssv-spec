@@ -36,7 +36,7 @@ func TestJson(t *testing.T) {
 		panic(err.Error())
 	}
 
-	if err := json.Unmarshal(byteValue, &untypedTests); err != nil {
+	if err := json.ConfigFastest.Unmarshal(byteValue, &untypedTests); err != nil {
 		panic(err.Error())
 	}
 
@@ -47,10 +47,10 @@ func TestJson(t *testing.T) {
 			testType := strings.Split(name, "_")[0]
 			switch testType {
 			case reflect.TypeOf(&tests2.MsgProcessingSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &tests2.MsgProcessingSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				// a little trick we do to instantiate all the internal instance params
 				preByts, _ := typedTest.Pre.Encode()
@@ -67,50 +67,50 @@ func TestJson(t *testing.T) {
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&tests2.MsgSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &tests2.MsgSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&tests2.ControllerSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &tests2.ControllerSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&tests2.CreateMsgSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &tests2.CreateMsgSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&tests2.RoundRobinSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &tests2.RoundRobinSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&futuremsg.ControllerSyncSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &futuremsg.ControllerSyncSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				tests[testName] = typedTest
 				typedTest.Run(t)
 			case reflect.TypeOf(&timeout.SpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &timeout.SpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				// a little trick we do to instantiate all the internal instance params
 				preByts, _ := typedTest.Pre.Encode()

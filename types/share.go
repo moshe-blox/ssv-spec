@@ -26,9 +26,9 @@ func (share *Share) HasPartialQuorum(cnt int) bool {
 }
 
 func (share *Share) Encode() ([]byte, error) {
-	return json.Marshal(share)
+	return json.ConfigFastest.Marshal(share)
 }
 
 func (share *Share) Decode(data []byte) error {
-	return json.Unmarshal(data, share)
+	return json.ConfigFastest.Unmarshal(data, share)
 }

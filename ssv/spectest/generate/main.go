@@ -22,7 +22,7 @@ func main() {
 		all[n] = t
 	}
 
-	byts, err := json.Marshal(all)
+	byts, err := json.ConfigFastest.Marshal(all)
 	if err != nil {
 		panic(err.Error())
 	}

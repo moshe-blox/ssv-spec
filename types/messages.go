@@ -117,10 +117,10 @@ func (msg *SSVMessage) GetData() []byte {
 
 // Encode returns a msg encoded bytes or error
 func (msg *SSVMessage) Encode() ([]byte, error) {
-	return json.Marshal(msg)
+	return json.ConfigFastest.Marshal(msg)
 }
 
 // Decode returns error if decoding failed
 func (msg *SSVMessage) Decode(data []byte) error {
-	return json.Unmarshal(data, &msg)
+	return json.ConfigFastest.Unmarshal(data, &msg)
 }

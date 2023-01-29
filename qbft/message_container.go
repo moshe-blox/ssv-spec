@@ -121,10 +121,10 @@ func (c *MsgContainer) AddMsg(msg *SignedMessage) {
 
 // Encode returns the encoded struct in bytes or error
 func (c *MsgContainer) Encode() ([]byte, error) {
-	return json.Marshal(c)
+	return json.ConfigFastest.Marshal(c)
 }
 
 // Decode returns error if decoding failed
 func (c *MsgContainer) Decode(data []byte) error {
-	return json.Unmarshal(data, &c)
+	return json.ConfigFastest.Unmarshal(data, &c)
 }

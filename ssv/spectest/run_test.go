@@ -40,7 +40,7 @@ func TestJson(t *testing.T) {
 		panic(err.Error())
 	}
 
-	if err := json.Unmarshal(byteValue, &untypedTests); err != nil {
+	if err := json.ConfigFastest.Unmarshal(byteValue, &untypedTests); err != nil {
 		panic(err.Error())
 	}
 
@@ -67,31 +67,31 @@ func TestJson(t *testing.T) {
 
 				typedTest.Run(t)
 			case reflect.TypeOf(&messages.MsgSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &messages.MsgSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				typedTest.Run(t)
 			case reflect.TypeOf(&valcheck.SpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &valcheck.SpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				typedTest.Run(t)
 			case reflect.TypeOf(&valcheck.MultiSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &valcheck.MultiSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				typedTest.Run(t)
 			case reflect.TypeOf(&synccommitteeaggregator.SyncCommitteeAggregatorProofSpecTest{}).String():
-				byts, err := json.Marshal(test)
+				byts, err := json.ConfigFastest.Marshal(test)
 				require.NoError(t, err)
 				typedTest := &synccommitteeaggregator.SyncCommitteeAggregatorProofSpecTest{}
-				require.NoError(t, json.Unmarshal(byts, &typedTest))
+				require.NoError(t, json.ConfigFastest.Unmarshal(byts, &typedTest))
 
 				typedTest.Run(t)
 			case reflect.TypeOf(&newduty.MultiStartNewRunnerDutySpecTest{}).String():
@@ -118,14 +118,14 @@ func newRunnerDutySpecTestFromMap(t *testing.T, m map[string]interface{}) *newdu
 	runnerMap := m["Runner"].(map[string]interface{})["BaseRunner"].(map[string]interface{})
 
 	duty := &types.Duty{}
-	byts, _ := json.Marshal(m["Duty"])
-	require.NoError(t, json.Unmarshal(byts, duty))
+	byts, _ := json.ConfigFastest.Marshal(m["Duty"])
+	require.NoError(t, json.ConfigFastest.Unmarshal(byts, duty))
 
 	outputMsgs := make([]*ssv.SignedPartialSignatureMessage, 0)
 	for _, msg := range m["OutputMessages"].([]interface{}) {
-		byts, _ = json.Marshal(msg)
+		byts, _ = json.ConfigFastest.Marshal(msg)
 		typedMsg := &ssv.SignedPartialSignatureMessage{}
-		require.NoError(t, json.Unmarshal(byts, typedMsg))
+		require.NoError(t, json.ConfigFastest.Unmarshal(byts, typedMsg))
 		outputMsgs = append(outputMsgs, typedMsg)
 	}
 
@@ -147,23 +147,23 @@ func msgProcessingSpecTestFromMap(t *testing.T, m map[string]interface{}) *tests
 	runnerMap := m["Runner"].(map[string]interface{})["BaseRunner"].(map[string]interface{})
 
 	duty := &types.Duty{}
-	byts, _ := json.Marshal(m["Duty"])
-	require.NoError(t, json.Unmarshal(byts, duty))
+	byts, _ := json.ConfigFastest.Marshal(m["Duty"])
+	require.NoError(t, json.ConfigFastest.Unmarshal(byts, duty))
 
 	msgs := make([]*types.SSVMessage, 0)
 	for _, msg := range m["Messages"].([]interface{}) {
-		byts, _ = json.Marshal(msg)
+		byts, _ = json.ConfigFastest.Marshal(msg)
 		typedMsg := &types.SSVMessage{}
-		require.NoError(t, json.Unmarshal(byts, typedMsg))
+		require.NoError(t, json.ConfigFastest.Unmarshal(byts, typedMsg))
 		msgs = append(msgs, typedMsg)
 	}
 
 	outputMsgs := make([]*ssv.SignedPartialSignatureMessage, 0)
 	require.NotNilf(t, m["OutputMessages"], "OutputMessages can't be nil")
 	for _, msg := range m["OutputMessages"].([]interface{}) {
-		byts, _ = json.Marshal(msg)
+		byts, _ = json.ConfigFastest.Marshal(msg)
 		typedMsg := &ssv.SignedPartialSignatureMessage{}
-		require.NoError(t, json.Unmarshal(byts, typedMsg))
+		require.NoError(t, json.ConfigFastest.Unmarshal(byts, typedMsg))
 		outputMsgs = append(outputMsgs, typedMsg)
 	}
 
@@ -194,8 +194,8 @@ func msgProcessingSpecTestFromMap(t *testing.T, m map[string]interface{}) *tests
 
 func fixRunnerForRun(t *testing.T, baseRunner map[string]interface{}, ks *testingutils.TestKeySet) ssv.Runner {
 	base := &ssv.BaseRunner{}
-	byts, _ := json.Marshal(baseRunner)
-	require.NoError(t, json.Unmarshal(byts, &base))
+	byts, _ := json.ConfigFastest.Marshal(baseRunner)
+	require.NoError(t, json.ConfigFastest.Unmarshal(byts, &base))
 
 	ret := baseRunnerForRole(base.BeaconRoleType, base, ks)
 	ret.GetBaseRunner().QBFTController = fixControllerForRun(t, ret, ret.GetBaseRunner().QBFTController, ks)

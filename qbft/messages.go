@@ -49,12 +49,12 @@ type ProposalData struct {
 
 // Encode returns a msg encoded bytes or error
 func (d *ProposalData) Encode() ([]byte, error) {
-	return json.Marshal(d)
+	return json.ConfigFastest.Marshal(d)
 }
 
 // Decode returns error if decoding failed
 func (d *ProposalData) Decode(data []byte) error {
-	return json.Unmarshal(data, &d)
+	return json.ConfigFastest.Unmarshal(data, &d)
 }
 
 // Validate returns error if msg validation doesn't pass.
@@ -72,12 +72,12 @@ type PrepareData struct {
 
 // Encode returns a msg encoded bytes or error
 func (d *PrepareData) Encode() ([]byte, error) {
-	return json.Marshal(d)
+	return json.ConfigFastest.Marshal(d)
 }
 
 // Decode returns error if decoding failed
 func (d *PrepareData) Decode(data []byte) error {
-	return json.Unmarshal(data, &d)
+	return json.ConfigFastest.Unmarshal(data, &d)
 }
 
 // Validate returns error if msg validation doesn't pass.
@@ -95,12 +95,12 @@ type CommitData struct {
 
 // Encode returns a msg encoded bytes or error
 func (d *CommitData) Encode() ([]byte, error) {
-	return json.Marshal(d)
+	return json.ConfigFastest.Marshal(d)
 }
 
 // Decode returns error if decoding failed
 func (d *CommitData) Decode(data []byte) error {
-	return json.Unmarshal(data, &d)
+	return json.ConfigFastest.Unmarshal(data, &d)
 }
 
 // Validate returns error if msg validation doesn't pass.
@@ -127,12 +127,12 @@ func (d *RoundChangeData) Prepared() bool {
 
 // Encode returns a msg encoded bytes or error
 func (d *RoundChangeData) Encode() ([]byte, error) {
-	return json.Marshal(d)
+	return json.ConfigFastest.Marshal(d)
 }
 
 // Decode returns error if decoding failed
 func (d *RoundChangeData) Decode(data []byte) error {
-	return json.Unmarshal(data, &d)
+	return json.ConfigFastest.Unmarshal(data, &d)
 }
 
 // Validate returns error if msg validation doesn't pass.
@@ -196,12 +196,12 @@ func (msg *Message) GetRoundChangeData() (*RoundChangeData, error) {
 
 // Encode returns a msg encoded bytes or error
 func (msg *Message) Encode() ([]byte, error) {
-	return json.Marshal(msg)
+	return json.ConfigFastest.Marshal(msg)
 }
 
 // Decode returns error if decoding failed
 func (msg *Message) Decode(data []byte) error {
-	return json.Unmarshal(data, &msg)
+	return json.ConfigFastest.Unmarshal(data, &msg)
 }
 
 // GetRoot returns the root used for signing and verification
@@ -305,12 +305,12 @@ func (signedMsg *SignedMessage) Aggregate(sig types.MessageSignature) error {
 
 // Encode returns a msg encoded bytes or error
 func (signedMsg *SignedMessage) Encode() ([]byte, error) {
-	return json.Marshal(signedMsg)
+	return json.ConfigFastest.Marshal(signedMsg)
 }
 
 // Decode returns error if decoding failed
 func (signedMsg *SignedMessage) Decode(data []byte) error {
-	return json.Unmarshal(data, &signedMsg)
+	return json.ConfigFastest.Unmarshal(data, &signedMsg)
 }
 
 // GetRoot returns the root used for signing and verification
