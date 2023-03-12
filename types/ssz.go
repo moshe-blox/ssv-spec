@@ -3,6 +3,7 @@ package types
 import (
 	"encoding/binary"
 	"fmt"
+
 	"github.com/attestantio/go-eth2-client/spec/bellatrix"
 	ssz "github.com/ferranbt/fastssz"
 )
@@ -100,7 +101,7 @@ func (b SSZ32Bytes) HashTreeRootWith(hh ssz.HashWalker) error {
 }
 
 // UnmarshalSSZ --
-func (b SSZ32Bytes) UnmarshalSSZ(buf []byte) error {
+func (b *SSZ32Bytes) UnmarshalSSZ(buf []byte) error {
 	if len(buf) != b.SizeSSZ() {
 		return fmt.Errorf("expected buffer of length %d receiced %d", b.SizeSSZ(), len(buf))
 	}
