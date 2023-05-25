@@ -85,8 +85,8 @@ type DomainCalls interface {
 }
 
 type BeaconNode interface {
-	// GetBeaconNetwork returns the beacon network the node is on
-	GetBeaconNetwork() types.BeaconNetwork
+	// GetNetworkConfig returns the beacon network the node is on
+	GetNetworkConfig() types.NetworkConfig
 	AttesterCalls
 	ProposerCalls
 	AggregatorCalls

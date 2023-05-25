@@ -23,7 +23,7 @@ const (
 )
 
 var (
-	TestingCapellaForkEpoch = types.TestNetwork.ETH.CapellaForkEpoch
+	TestingCapellaForkEpoch = types.TestNetwork.Beacon.CapellaForkEpoch
 
 	TestingDutyEpochCapella         = TestingCapellaForkEpoch
 	TestingDutySlotCapella          = types.TestNetwork.FirstSlotAtEpoch(TestingCapellaForkEpoch)

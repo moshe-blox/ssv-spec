@@ -1,17 +1,18 @@
 package valcheck
 
 import (
+	"testing"
+
 	"github.com/bloxapp/ssv-spec/qbft"
 	"github.com/bloxapp/ssv-spec/ssv"
 	"github.com/bloxapp/ssv-spec/types"
 	"github.com/bloxapp/ssv-spec/types/testingutils"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 type SpecTest struct {
 	Name               string
-	Network            types.BeaconNetwork
+	Network            types.NetworkConfig
 	BeaconRole         types.BeaconRole
 	Input              []byte
 	SlashableDataRoots [][]byte

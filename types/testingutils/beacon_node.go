@@ -2,6 +2,7 @@ package testingutils
 
 import (
 	"encoding/hex"
+
 	"github.com/attestantio/go-eth2-client/api"
 	v1 "github.com/attestantio/go-eth2-client/api/v1"
 	apiv1bellatrix "github.com/attestantio/go-eth2-client/api/v1/bellatrix"
@@ -434,8 +435,8 @@ func (bn *TestingBeaconNode) SetSyncCommitteeAggregatorRootHexes(roots map[strin
 	bn.syncCommitteeAggregatorRoots = roots
 }
 
-// GetBeaconNetwork returns the beacon network the node is on
-func (bn *TestingBeaconNode) GetBeaconNetwork() types.BeaconNetwork {
+// GetNetworkConfig returns the beacon network the node is on
+func (bn *TestingBeaconNode) GetNetworkConfig() types.NetworkConfig {
 	return types.TestNetwork
 }
 
