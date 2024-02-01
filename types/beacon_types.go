@@ -1,9 +1,11 @@
 package types
 
 import (
+	"encoding/json"
 	"time"
 
 	spec "github.com/attestantio/go-eth2-client/spec/phase0"
+	"github.com/bloxapp/ssv-spec/goeth3client"
 	ssz "github.com/ferranbt/fastssz"
 )
 
@@ -92,6 +94,41 @@ type Duty struct {
 	ValidatorCommitteeIndex uint64
 	// ValidatorSyncCommitteeIndices is the index of the validator in the list of validators in the committee.
 	ValidatorSyncCommitteeIndices []uint64 `ssz-max:"13"`
+}
+
+func (d Duty) MarshalJSON() ([]byte, error) {
+	type Duty2 struct {
+		// Type is the duty type (attest, propose)
+		Type BeaconRole
+		// PubKey is the public key of the validator that should attest.
+		PubKey goeth3client.BLSPubKey `ssz-size:"48"`
+		// Slot is the slot in which the validator should attest.
+		Slot spec.Slot
+		// ValidatorIndex is the index of the validator that should attest.
+		ValidatorIndex spec.ValidatorIndex
+		// CommitteeIndex is the index of the committee in which the attesting validator has been placed.
+		CommitteeIndex spec.CommitteeIndex
+		// CommitteeLength is the length of the committee in which the attesting validator has been placed.
+		CommitteeLength uint64
+		// CommitteesAtSlot is the number of committees in the slot.
+		CommitteesAtSlot uint64
+		// ValidatorCommitteeIndex is the index of the validator in the list of validators in the committee.
+		ValidatorCommitteeIndex uint64
+		// ValidatorSyncCommitteeIndices is the index of the validator in the list of validators in the committee.
+		ValidatorSyncCommitteeIndices []uint64 `ssz-max:"13"`
+	}
+	var duty2 = Duty2{
+		Type:                          d.Type,
+		PubKey:                        goeth3client.BLSPubKey(d.PubKey),
+		Slot:                          d.Slot,
+		ValidatorIndex:                d.ValidatorIndex,
+		CommitteeIndex:                d.CommitteeIndex,
+		CommitteeLength:               d.CommitteeLength,
+		CommitteesAtSlot:              d.CommitteesAtSlot,
+		ValidatorCommitteeIndex:       d.ValidatorCommitteeIndex,
+		ValidatorSyncCommitteeIndices: d.ValidatorSyncCommitteeIndices,
+	}
+	return json.Marshal(duty2)
 }
 
 // Available networks.
