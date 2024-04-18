@@ -3,10 +3,10 @@ package valcheckattestations
 import (
 	goEthSpec "github.com/attestantio/go-eth2-client/spec"
 	spec "github.com/attestantio/go-eth2-client/spec/phase0"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/valcheck"
-	"github.com/bloxapp/ssv-spec/types"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/valcheck"
+	"github.com/mosheblox/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // SlotMismatch tests BeaconDuty.Slot != AttestationData.Slot

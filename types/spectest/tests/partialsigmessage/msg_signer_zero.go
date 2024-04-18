@@ -3,9 +3,9 @@ package partialsigmessage
 import (
 	"github.com/attestantio/go-eth2-client/spec"
 
-	"github.com/bloxapp/ssv-spec/qbft"
-	"github.com/bloxapp/ssv-spec/types"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/qbft"
+	"github.com/mosheblox/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // MessageSigner0 tests PartialSignatureMessage signer == 0

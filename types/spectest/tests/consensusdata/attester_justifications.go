@@ -1,8 +1,8 @@
 package consensusdata
 
 import (
-	"github.com/bloxapp/ssv-spec/types"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // AttesterJustifications tests an invalid consensus data with attester pre-consensus justifications

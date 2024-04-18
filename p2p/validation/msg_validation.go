@@ -3,11 +3,11 @@ package validation
 import (
 	"context"
 
-	"github.com/bloxapp/ssv-spec/qbft"
-	"github.com/bloxapp/ssv-spec/ssv"
-	"github.com/bloxapp/ssv-spec/types"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/mosheblox/ssv-spec/qbft"
+	"github.com/mosheblox/ssv-spec/ssv"
+	"github.com/mosheblox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

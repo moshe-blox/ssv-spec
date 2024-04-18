@@ -1,11 +1,12 @@
 package tests
 
 import (
-	"github.com/bloxapp/ssv-spec/types"
 	"path/filepath"
 	"reflect"
 	"strings"
 	"testing"
+
+	"github.com/mosheblox/ssv-spec/types"
 )
 
 type MultiMsgProcessingSpecTest struct {

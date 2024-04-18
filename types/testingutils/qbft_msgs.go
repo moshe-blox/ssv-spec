@@ -4,8 +4,8 @@ import (
 	"crypto/rsa"
 	"crypto/sha256"
 
-	"github.com/bloxapp/ssv-spec/qbft"
-	"github.com/bloxapp/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/qbft"
+	"github.com/mosheblox/ssv-spec/types"
 )
 
 var TestingIdentifier = []byte{1, 2, 3, 4}

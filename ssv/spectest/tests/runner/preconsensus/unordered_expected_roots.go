@@ -3,9 +3,9 @@ package preconsensus
 import (
 	"github.com/attestantio/go-eth2-client/spec"
 
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests"
-	"github.com/bloxapp/ssv-spec/types"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
+	"github.com/mosheblox/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // UnorderedExpectedRoots tests expected roots to match but out of order, should return error

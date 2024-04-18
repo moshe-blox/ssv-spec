@@ -5,8 +5,8 @@ import (
 	"sort"
 
 	spec "github.com/attestantio/go-eth2-client/spec/phase0"
-	"github.com/bloxapp/ssv-spec/types"
 	ssz "github.com/ferranbt/fastssz"
+	"github.com/mosheblox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 
@@ -45,7 +45,7 @@ func (b *BaseRunner) ValidatePostConsensusMsg(runner Runner, psigMsgs *types.Par
 		return errors.New("no running duty")
 	}
 
-	// TODO https://github.com/bloxapp/ssv-spec/issues/142 need to fix with this issue solution instead.
+	// TODO https://github.com/mosheblox/ssv-spec/issues/142 need to fix with this issue solution instead.
 	if b.State.DecidedValue == nil || len(b.State.DecidedValue) == 0 {
 		return errors.New("no decided value")
 	}

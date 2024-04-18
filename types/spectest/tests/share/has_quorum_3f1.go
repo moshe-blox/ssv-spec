@@ -3,8 +3,8 @@ package share
 import (
 	"crypto/rsa"
 
-	"github.com/bloxapp/ssv-spec/types"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // HasQuorum3f1 tests msg with unique 3f+1 signers

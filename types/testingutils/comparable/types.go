@@ -3,7 +3,7 @@ package comparable
 import (
 	"encoding/hex"
 
-	"github.com/bloxapp/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types"
 )
 
 type StateComparison struct {

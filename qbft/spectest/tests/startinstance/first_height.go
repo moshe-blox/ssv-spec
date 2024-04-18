@@ -1,9 +1,9 @@
 package startinstance
 
 import (
-	"github.com/bloxapp/ssv-spec/qbft"
-	"github.com/bloxapp/ssv-spec/qbft/spectest/tests"
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/qbft"
+	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // FirstHeight tests a starting the first instance

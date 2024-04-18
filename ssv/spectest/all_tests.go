@@ -1,19 +1,19 @@
 package spectest
 
 import (
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/dutyexe"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/partialsigcontainer"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/consensus"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/duties/newduty"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/duties/proposer"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/duties/synccommitteeaggregator"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/postconsensus"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/runner/preconsensus"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/valcheck/valcheckattestations"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/valcheck/valcheckduty"
-	"github.com/bloxapp/ssv-spec/ssv/spectest/tests/valcheck/valcheckproposer"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/dutyexe"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/partialsigcontainer"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/consensus"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/duties/newduty"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/duties/proposer"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/duties/synccommitteeaggregator"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/postconsensus"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/runner/preconsensus"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/valcheck/valcheckattestations"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/valcheck/valcheckduty"
+	"github.com/mosheblox/ssv-spec/ssv/spectest/tests/valcheck/valcheckproposer"
 )
 
 var AllTests = []tests.TestF{

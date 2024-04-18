@@ -1,7 +1,7 @@
 package testingutils
 
 import (
-	"github.com/bloxapp/ssv-spec/qbft"
+	"github.com/mosheblox/ssv-spec/qbft"
 )
 
 func UnknownDutyValueCheck() qbft.ProposedValueCheckF {

@@ -1,8 +1,9 @@
 package types
 
 import (
-	"github.com/bloxapp/ssv-spec/ssv"
 	"time"
+
+	"github.com/mosheblox/ssv-spec/ssv"
 
 	spec "github.com/attestantio/go-eth2-client/spec/phase0"
 	ssz "github.com/ferranbt/fastssz"

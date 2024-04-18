@@ -1,14 +1,15 @@
 package consensusdataproposer
 
 import (
-	comparable2 "github.com/bloxapp/ssv-spec/types/testingutils/comparable"
 	reflect2 "reflect"
 	"testing"
+
+	comparable2 "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
 
 	"github.com/attestantio/go-eth2-client/spec"
 	"github.com/stretchr/testify/require"
 
-	"github.com/bloxapp/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types"
 )
 
 type ProposerSpecTest struct {

@@ -3,7 +3,7 @@ package qbft
 import (
 	"crypto/sha256"
 
-	"github.com/bloxapp/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

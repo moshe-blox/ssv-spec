@@ -4,8 +4,8 @@ import (
 	reflect2 "reflect"
 	"testing"
 
-	"github.com/bloxapp/ssv-spec/types"
-	comparable2 "github.com/bloxapp/ssv-spec/types/testingutils/comparable"
+	"github.com/mosheblox/ssv-spec/types"
+	comparable2 "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
 	"github.com/stretchr/testify/require"
 )
 

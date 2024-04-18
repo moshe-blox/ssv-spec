@@ -1,8 +1,8 @@
 package testingutils
 
 import (
-	"github.com/bloxapp/ssv-spec/ssv"
-	"github.com/bloxapp/ssv-spec/types"
+	"github.com/mosheblox/ssv-spec/ssv"
+	"github.com/mosheblox/ssv-spec/types"
 )
 
 var BaseValidator = func(keySet *TestKeySet) *ssv.Validator {

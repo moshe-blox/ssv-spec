@@ -1,7 +1,7 @@
 package ssvmsg
 
 import (
-	"github.com/bloxapp/ssv-spec/types/testingutils"
+	"github.com/mosheblox/ssv-spec/types/testingutils"
 )
 
 // Encoding tests encoding of a ssv message

@@ -4,8 +4,9 @@ import (
 	"bytes"
 	"encoding/binary"
 	"encoding/hex"
+
 	"github.com/attestantio/go-eth2-client/spec/phase0"
-	"github.com/bloxapp/ssv-spec/ssv"
+	"github.com/mosheblox/ssv-spec/ssv"
 
 	"github.com/pkg/errors"
 )
