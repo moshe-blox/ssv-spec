@@ -1,10 +1,10 @@
 package futuremsg
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // ValidMsg tests future msg valid msg. This is a valid msg that is not yet ready to be processed.

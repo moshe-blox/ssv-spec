@@ -10,7 +10,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/herumi/bls-eth-go-binary/bls"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 var TestingValidatorPubKey = func() spec.BLSPubKey {

@@ -1,8 +1,8 @@
 package testingutils
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 var SSVDecidingMsgsV = func(consensusData *types.ConsensusData, ks *TestKeySet, role types.BeaconRole) []*types.SignedSSVMessage {

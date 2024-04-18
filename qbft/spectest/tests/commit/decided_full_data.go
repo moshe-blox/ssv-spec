@@ -1,6 +1,6 @@
 package commit
 
-import "github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+import "github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
 
 // DecidedFullData tests the aggregated commit returned when decided to include the full data
 func DecidedFullData() tests.SpecTest {

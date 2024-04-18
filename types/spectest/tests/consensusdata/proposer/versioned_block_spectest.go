@@ -4,12 +4,12 @@ import (
 	reflect2 "reflect"
 	"testing"
 
-	comparable2 "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
+	comparable2 "github.com/moshe-blox/ssv-spec/types/testingutils/comparable"
 
 	"github.com/attestantio/go-eth2-client/spec"
 	"github.com/stretchr/testify/require"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 type ProposerSpecTest struct {

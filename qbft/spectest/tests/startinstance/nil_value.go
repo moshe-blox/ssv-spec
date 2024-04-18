@@ -1,7 +1,7 @@
 package startinstance
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
 )
 
 // NilValue tests a starting an instance for a nil value (not passing value check)

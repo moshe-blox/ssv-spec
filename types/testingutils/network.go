@@ -3,7 +3,7 @@ package testingutils
 import (
 	"crypto/rsa"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 type TestingNetwork struct {

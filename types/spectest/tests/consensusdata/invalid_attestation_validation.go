@@ -1,6 +1,6 @@
 package consensusdata
 
-import "github.com/mosheblox/ssv-spec/types/testingutils"
+import "github.com/moshe-blox/ssv-spec/types/testingutils"
 
 // InvalidAttestationValidation tests an invalid consensus data with AttestationData
 func InvalidAttestationValidation() *ConsensusDataTest {

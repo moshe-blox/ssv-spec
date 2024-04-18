@@ -5,11 +5,11 @@ import (
 
 	"github.com/attestantio/go-eth2-client/spec"
 
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/ssv"
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/ssv"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // PostInvalidDecided tests starting a new duty after prev was decided with an invalid decided value
@@ -37,7 +37,7 @@ func PostInvalidDecided() tests.SpecTest {
 		return byts
 	}
 
-	// https://github.com/mosheblox/ssv-spec/issues/285. We initialize the runner with an impossible decided value.
+	// https://github.com/moshe-blox/ssv-spec/issues/285. We initialize the runner with an impossible decided value.
 	// Maybe we should ensure that `ValidateDecided()` doesn't let the runner enter this state and delete the test?
 	decideWrong := func(r ssv.Runner, duty *types.BeaconDuty) ssv.Runner {
 		r.GetBaseRunner().State = ssv.NewRunnerState(3, duty)

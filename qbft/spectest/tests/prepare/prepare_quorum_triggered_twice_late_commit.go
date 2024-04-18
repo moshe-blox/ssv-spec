@@ -1,9 +1,9 @@
 package prepare
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // PrepareQuorumTriggeredTwiceLateCommit tests triggering prepare quorum twice by sending > 2f+1 prepare messages.

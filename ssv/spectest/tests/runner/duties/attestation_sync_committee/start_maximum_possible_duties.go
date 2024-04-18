@@ -1,7 +1,7 @@
 package newduty
 
 import (
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
 )
 
 // StartMaximumPossibleDuties starts a cluster runner with 500 attestation and 500 sync committee duties

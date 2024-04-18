@@ -9,8 +9,8 @@ import (
 	ssz "github.com/ferranbt/fastssz"
 	"github.com/pkg/errors"
 
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 type ProposerRunner struct {

@@ -4,11 +4,11 @@ import (
 	"crypto/rsa"
 	"crypto/sha256"
 
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
-	"github.com/mosheblox/ssv-spec/types/testingutils/comparable"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/types/testingutils/comparable"
 )
 
 // InvalidValCheckData tests a decided message with invalid decided data (but should pass as it's decided)

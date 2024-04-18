@@ -1,7 +1,7 @@
 package testingutils
 
 import (
-	"github.com/mosheblox/ssv-spec/ssv"
+	"github.com/moshe-blox/ssv-spec/ssv"
 )
 
 var BaseCluster = func(keySet *TestKeySet) *ssv.Committee {

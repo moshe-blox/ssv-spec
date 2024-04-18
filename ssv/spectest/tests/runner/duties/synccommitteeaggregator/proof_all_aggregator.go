@@ -3,9 +3,9 @@ package synccommitteeaggregator
 import (
 	"encoding/hex"
 
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // AllAggregatorQuorum tests a quorum of selection proofs of which all are aggregator

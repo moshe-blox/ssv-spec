@@ -1,6 +1,6 @@
 package testingutils
 
-import "github.com/mosheblox/ssv-spec/qbft"
+import "github.com/moshe-blox/ssv-spec/qbft"
 
 type TimerState struct {
 	Timeouts int

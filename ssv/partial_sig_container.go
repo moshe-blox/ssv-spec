@@ -5,7 +5,7 @@ import (
 
 	"github.com/attestantio/go-eth2-client/spec/phase0"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

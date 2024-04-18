@@ -1,8 +1,8 @@
 package ssv
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

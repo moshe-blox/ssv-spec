@@ -1,4 +1,4 @@
-module github.com/mosheblox/ssv-spec
+module github.com/moshe-blox/ssv-spec
 
 go 1.19
 

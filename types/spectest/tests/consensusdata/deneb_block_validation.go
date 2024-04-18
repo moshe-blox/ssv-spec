@@ -2,7 +2,7 @@ package consensusdata
 
 import (
 	"github.com/attestantio/go-eth2-client/spec"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // DenebBlockValidation tests a valid consensus data with deneb block

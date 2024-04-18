@@ -7,7 +7,7 @@ import (
 	"crypto/sha256"
 	"crypto/x509"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

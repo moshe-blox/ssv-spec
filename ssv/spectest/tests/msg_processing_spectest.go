@@ -7,13 +7,13 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	typescomparable "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
+	typescomparable "github.com/moshe-blox/ssv-spec/types/testingutils/comparable"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/mosheblox/ssv-spec/ssv"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/ssv"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 type MsgProcessingSpecTest struct {

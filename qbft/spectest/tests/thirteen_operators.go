@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // ThirteenOperators tests a simple full happy flow until decided

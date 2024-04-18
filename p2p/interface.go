@@ -1,6 +1,6 @@
 package p2p
 
-import "github.com/mosheblox/ssv-spec/types"
+import "github.com/moshe-blox/ssv-spec/types"
 
 // Broadcaster is the interface used to abstract message broadcasting
 type Broadcaster interface {

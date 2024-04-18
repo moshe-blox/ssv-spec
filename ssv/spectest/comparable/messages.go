@@ -3,8 +3,8 @@ package ssvcomparable
 import (
 	"encoding/hex"
 
-	"github.com/mosheblox/ssv-spec/ssv"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/ssv"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 func SetMessagesInContainer(container *ssv.PartialSigContainer, messages []*types.SignedSSVMessage) *ssv.PartialSigContainer {

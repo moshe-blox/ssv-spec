@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/herumi/bls-eth-go-binary/bls"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 // EncryptBLSSK tests encrypting a BLS private key

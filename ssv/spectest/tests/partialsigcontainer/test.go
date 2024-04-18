@@ -3,8 +3,8 @@ package partialsigcontainer
 import (
 	"testing"
 
-	"github.com/mosheblox/ssv-spec/ssv"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/ssv"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/stretchr/testify/require"
 )
 

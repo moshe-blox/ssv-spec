@@ -1,6 +1,6 @@
 package messages
 
-import "github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+import "github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
 
 // CreatePrepare tests creating a prepare msg
 func CreatePrepare() tests.SpecTest {

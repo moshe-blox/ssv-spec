@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 type MultiMsgProcessingSpecTest struct {

@@ -5,9 +5,9 @@ import (
 
 	"github.com/attestantio/go-eth2-client/spec"
 
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // InvalidQuorumThenValidQuorum tests a runner receiving an invalid message forming an invalid quorum, then receiving a valid message forming a valid quorum, terminating successfully

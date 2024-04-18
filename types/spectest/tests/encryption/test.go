@@ -3,7 +3,7 @@ package encryption
 import (
 	"testing"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,12 +10,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	comparable2 "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	comparable2 "github.com/moshe-blox/ssv-spec/types/testingutils/comparable"
 	"github.com/pkg/errors"
 
-	"github.com/mosheblox/ssv-spec/ssv/spectest"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest"
 )
 
 //go:generate go run main.go

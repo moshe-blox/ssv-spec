@@ -3,16 +3,16 @@ package spectest
 import (
 	"testing"
 
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/beacon"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/consensusdata"
-	consensusdataproposer "github.com/mosheblox/ssv-spec/types/spectest/tests/consensusdata/proposer"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/encryption"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/partialsigmessage"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/share"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/ssvmsg"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/beacon"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/consensusdata"
+	consensusdataproposer "github.com/moshe-blox/ssv-spec/types/spectest/tests/consensusdata/proposer"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/encryption"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/partialsigmessage"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/share"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/ssvmsg"
 
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/signedssvmsg"
-	"github.com/mosheblox/ssv-spec/types/spectest/tests/ssz"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/signedssvmsg"
+	"github.com/moshe-blox/ssv-spec/types/spectest/tests/ssz"
 )
 
 type SpecTest interface {

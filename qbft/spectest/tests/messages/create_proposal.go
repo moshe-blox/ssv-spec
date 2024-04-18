@@ -1,7 +1,7 @@
 package messages
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
 )
 
 // CreateProposal tests creating a proposal msg, not previously prepared

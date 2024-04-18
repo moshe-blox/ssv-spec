@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/attestantio/go-eth2-client/spec"
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // WrongDutyRole tests decided value duty with wrong duty role (!= duty runner role)

@@ -1,8 +1,8 @@
 package comparable
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 func SetMessages(instance *qbft.Instance, messages []*types.SignedSSVMessage) {

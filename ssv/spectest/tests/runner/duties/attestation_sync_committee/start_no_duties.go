@@ -1,7 +1,7 @@
 package newduty
 
 import (
-	"github.com/mosheblox/ssv-spec/ssv/spectest/tests"
+	"github.com/moshe-blox/ssv-spec/ssv/spectest/tests"
 )
 
 // StartNoDuty starts a cluster runner with no duties

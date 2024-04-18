@@ -1,10 +1,10 @@
 package tests
 
 import (
-	"github.com/mosheblox/ssv-spec/qbft"
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
-	qbftcomparable "github.com/mosheblox/ssv-spec/types/testingutils/comparable"
+	"github.com/moshe-blox/ssv-spec/qbft"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
+	qbftcomparable "github.com/moshe-blox/ssv-spec/types/testingutils/comparable"
 )
 
 // HappyFlow tests a simple full happy flow until decided

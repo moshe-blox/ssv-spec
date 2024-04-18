@@ -3,8 +3,8 @@ package consensusdataproposer
 import (
 	"github.com/attestantio/go-eth2-client/spec"
 
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // VersionedBlindedBlockConsensusDataNil tests an invalid consensus data with deneb block

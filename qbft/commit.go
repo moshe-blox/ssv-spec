@@ -3,7 +3,7 @@ package qbft
 import (
 	"bytes"
 
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/pkg/errors"
 )
 

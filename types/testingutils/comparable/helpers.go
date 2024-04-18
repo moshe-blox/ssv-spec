@@ -11,7 +11,7 @@ import (
 	spec2 "github.com/attestantio/go-eth2-client/spec"
 	ssz "github.com/ferranbt/fastssz"
 	"github.com/google/go-cmp/cmp"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -26,7 +26,7 @@ func NoErrorEncoding(obj ssz.Marshaler) []byte {
 // FixIssue178 fixes consensus data fields which are nil instead of empty slice
 // If we change the fields in ssv_msgs.go it will break a lot of roots, we're slowly fixing them
 // SHOULD BE REMOVED once all tests are fixes
-// see https://github.com/mosheblox/ssv-spec/issues/178
+// see https://github.com/moshe-blox/ssv-spec/issues/178
 func FixIssue178(input *types.ConsensusData, version spec2.DataVersion) *types.ConsensusData {
 	byts, err := input.Encode()
 	if err != nil {

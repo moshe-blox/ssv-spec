@@ -1,8 +1,8 @@
 package signedssvmsg
 
 import (
-	"github.com/mosheblox/ssv-spec/types"
-	"github.com/mosheblox/ssv-spec/types/testingutils"
+	"github.com/moshe-blox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types/testingutils"
 )
 
 // Valid tests a valid SignedSSVMessageTest

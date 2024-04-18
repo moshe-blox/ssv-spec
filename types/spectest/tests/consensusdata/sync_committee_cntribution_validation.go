@@ -1,6 +1,6 @@
 package consensusdata
 
-import "github.com/mosheblox/ssv-spec/types/testingutils"
+import "github.com/moshe-blox/ssv-spec/types/testingutils"
 
 // SyncCommitteeContributionValidation tests a valid consensus data with sync committee contrib.
 func SyncCommitteeContributionValidation() *ConsensusDataTest {

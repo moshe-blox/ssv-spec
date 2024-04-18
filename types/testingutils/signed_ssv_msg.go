@@ -7,7 +7,7 @@ import (
 	"crypto/sha256"
 
 	"github.com/herumi/bls-eth-go-binary/bls"
-	"github.com/mosheblox/ssv-spec/types"
+	"github.com/moshe-blox/ssv-spec/types"
 )
 
 var TestingSignedSSVMessageSignature = []byte{1, 2, 3, 4}

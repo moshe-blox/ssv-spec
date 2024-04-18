@@ -1,6 +1,6 @@
 package types
 
-import "github.com/mosheblox/ssv-spec/ssv"
+import "github.com/moshe-blox/ssv-spec/ssv"
 
 // OperatorID is a unique ID for the node, used to create shares and verify msgs
 type OperatorID = uint64

@@ -1,6 +1,6 @@
 package messages
 
-import "github.com/mosheblox/ssv-spec/qbft/spectest/tests"
+import "github.com/moshe-blox/ssv-spec/qbft/spectest/tests"
 
 // CreateRoundChange tests creating a round change msg, not previously prepared
 func CreateRoundChange() tests.SpecTest {
